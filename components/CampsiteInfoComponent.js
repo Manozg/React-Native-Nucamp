@@ -54,7 +54,7 @@ function RenderCampsite(props) {
 }
 function RenderComments({comments}) {
     const renderCommentItem = ({item}) => {
-        //const rating = Number(item.rating);
+        //const rating = parseInt(item.rating);
         return (
             <View style={{margin: 10}}>
                 <Text style={{fontSize: 14}}>{item.text}</Text>
@@ -65,7 +65,7 @@ function RenderComments({comments}) {
                             paddingVertical: '5%'
                         }
                     }
-                    startingValue={item.rating}
+                    startingValue={item.rating} //{rating}
                     imageSize={10}
                     readonly
                 />
